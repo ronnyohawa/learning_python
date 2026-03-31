@@ -1,25 +1,3 @@
-# There are diffrent data types in python. Some of the are  
-# text types - str, 
-x = "This is text type or string"
-# numueric types - int,float,complex
-y = 5
-z =3.14
-a = 2 + 3j
-# sequence types - tuple,list,range
-b =(1,2,3)
-c = [1,2,3]
-d = range(1,10)
-# Mapping types - dict
-e = {"name":"ronny","age":30}
-# set types - set,frozenset
-f = {1,2,3}
-g= frozenset({1,2,3})
-# boolean type - bool
-h = True
-# binary types - bytes, bytearray, memoryview
-i =b"Hello"
-j = bytearray(b"Hello")
-k = memoryview(b"hello")
 
 # Now we will  dive deep to the numeric types
 # as we know we have three types  int, float and complex
@@ -94,5 +72,4 @@ print(random.randrange(1,10)) # this will generate a random number between 1 and
 print(random.randint(1,10)) # this will generate a random number between 1 and 10 inclusive
 print(random.random()) # this will generate a random number between 0 and 1
 print(random.uniform(1,10)) # this will generate a random number between 1 and 10 with decimal point
-
 
