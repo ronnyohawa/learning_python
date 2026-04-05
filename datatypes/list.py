@@ -131,3 +131,92 @@ fruits.clear()
 print(fruits)
 
 
+# Looping List
+# For loop is used to loop through items in a list
+fruits= ["apple", "bannana", "cherry"] # we create first the variable fruits and assign it a list of items.
+for x in fruits: # we use the for loop to loop the items in the list and assign each item to the variable x
+    print(x)
+
+# we can also loop using index of the list items using the range() and len() functions
+
+for i in range(len(fruits)): # we use range() function to generate a sequence of numbers from 0 to the length of the list 
+    #and assign it to the variable i
+    print(fruits[i]) # we use the variable i to access the items in the list using their index and print them
+
+# While Loop in a list
+fruits = ["apple", "banana", "cherry"]
+i = 0 # we create a variable i and assign it the value of 0
+
+while i < len(fruits):
+    print(fruits[i])
+    i += 1 # we increment the value of i by 1 in each iteration of the loop
+
+
+# sorting of lists
+# sort() method is used to sort the items in a list in assending order by defauld.
+fruits = ["banana", "cherry", "apple"] 
+fruits.sort()  # this will sort the list in alphabetical order
+print(fruits)
+
+# to sort in decending order we use the reverse parameter and set it to true
+fruits.sort(reverse= True)
+print(fruits)
+
+# Case sensitive sort the sort function will tend to sort the caps  items first b4 the small lettes to fix 
+# that we can use the key parameter and set it to str.lower to sort the items in a case insensitive way.
+fruits = ["banana", "Cherry", "apple"]
+fruits.sort(key= str.lower)
+print(fruits)
+
+# customize my sort function
+# we can also create our own sort function by defining a function and then using it as the key parameter in the sort() method.
+def myfunc(n):
+    return abs(n-50) # this function will return the absolute value of the diffrence between the number and 50
+# what is abs function? the abs() function is a built-in function in python that returns the absolute value of a number. 
+# the absolute value of a number is the distance of the number from zero on the number line. 
+# for example, the absolute value of -5 is 5 and the absolute value of 5 is also 5. 
+# so in our myfunc() function we are calculating the distance of each number from 50 
+# and then sorting the numbers based on that distance.
+
+mynumbers = [100, 50, 65, 82, 23]
+
+mynumbers.sort(key= myfunc) # this will sort the numbers based on their distance from 50
+print(mynumbers)
+
+# Coping of list
+# copy() method is used to copy a list. it creates a new list with the same items as the original list
+fruits = ["apple","banana", "cherry"]
+myfruits = fruits.copy() # this will create a new list myfruits with the same items as fruits
+print(myfruits)
+
+# list() can also be used to copy a list. it creates a new list with the same items as the original list
+myfruits2 = list(fruits) # this will create a new list myfruits2 with the same items as fruits
+print(myfruits2)
+
+# The slice operator : cana also be used to copy a list. it creates a new list with the same items as the original list
+myfruits3 = fruits[:] # this will create a new list myfruits3 with the same items as fruits
+print(myfruits3)
+
+# Joining Lists
+# + we can join two list using the + operator. it will create a new list that contains all the items from both lists.
+list = [1,2,3,4]
+list2 = [5,6,7]
+
+list3 = list + list2 # this will create a new list list3 that contains all the items from list and list2
+print(list3)
+
+# append() method can be used to add the items of one list to the end of another list. it will modify the original list.
+list = [1,2,3,4]
+list2 = [5,6,7]
+
+for x in list2:
+    list.append(x) # this will add each item from list2 to the end of list
+print(list)
+
+# extend() method can also be used to add the items of one list to the end of another list. it will modify the original list.
+list = [1,2,3,4]
+list2 = [5,6,7]
+
+list.extend(list2) # this will add all the items from list2 to the end of list
+print(list)
+
